@@ -1,6 +1,16 @@
 
 # Task 1
-#I do not know how to do it 
+submitted = ["Alice", "Bob", "Charlie", "David"]
+attended = ["Charlie", "Eve", "Alice", "Frank"]
+
+submitted_set = set(submitted)
+attended_set = set(attended)
+
+both_set = submitted_set.intersection(attended_set)
+
+both_list = list(both_set)
+
+print("Students who both submitted their assignments and attended the class:", both_list)
 
 # Task 2
 identical_lists = sorted(submitted) == sorted(attended)
