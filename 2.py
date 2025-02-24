@@ -1,26 +1,29 @@
-
-# Task 1
 submitted = ["Alice", "Bob", "Charlie", "David"]
 attended = ["Charlie", "Eve", "Alice", "Frank"]
+#1
+if attended[0] in submitted :
+    print(attended[0]+" has submitted their assignments and attended the class")
+if attended[1] in submitted :
+    print(attended[1]+" has submitted their assignments and attended the class")
+if attended[2] in submitted :
+    print(attended[2]+" has submitted their assignments and attended the class")
+if attended[3] in submitted :
+    print(attended[3]+" has submitted their assignments and attended the class")
 
-submitted_set = set(submitted)
-attended_set = set(attended)
+#2
 
-both_set = submitted_set.intersection(attended_set)
+submitted.sort()
+attended.sort()
+if submitted == attended :
+    print("lists are identical")
 
-both_list = list(both_set)
-
-print("Students who both submitted their assignments and attended the class:", both_list)
-
-# Task 2
-identical_lists = sorted(submitted) == sorted(attended)
-print(f"Are the lists identical regardless of order?", identical_lists)
-
-# Task 3
-attended.pop(1)
-attended.pop(-1)
-print(f"Attended list after removing students who didn't submit:", attended)
-
-
-
-
+#3
+if attended[3] not in submitted :
+    attended.remove(attended[3])
+if attended[2] not in submitted :
+    attended.remove(attended[2])
+if attended[1] not in submitted :
+    attended.remove(attended[1])
+if attended[0] not in submitted :
+    attended.remove(attended[0])
+print(attended)
